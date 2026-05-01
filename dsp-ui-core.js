@@ -4,7 +4,7 @@
    USAGE
    ─────
    HTML page:
-     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/gh/onth-bot/dsp-shared-ui@main/dsp-ui-core.js"></script>
 
    Tampermonkey:
@@ -132,9 +132,9 @@
     medalBronze:     "#c97b4b",
 
     /* Fonts */
-    fontBody:        "'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+    fontBody:        "'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
     fontDisplay:     "'Bebas Neue', Impact, sans-serif",
-    fontMono:        "'DM Mono', monospace"
+    fontMono:        "'JetBrains Mono', monospace"
   };
 
   /* ══════════════════════════════════════════════════════════
@@ -149,6 +149,8 @@
     style.id = "dsp-ui-core-theme";
 
     style.textContent = `
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 /* ── CUSTOM PROPERTIES ──────────────────────────────────────────────── */
 :root {
   /* Brand */
