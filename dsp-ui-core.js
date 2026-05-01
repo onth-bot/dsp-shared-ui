@@ -316,9 +316,7 @@
 .dsp-hero::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 55% at 50% 0%, var(--hero-glow) 0%, transparent 68%),
-    repeating-linear-gradient(  0deg, transparent, transparent 39px, var(--grid-line) 40px),
-    repeating-linear-gradient( 90deg, transparent, transparent 39px, var(--grid-line) 40px);
+    radial-gradient(ellipse 80% 55% at 50% 0%, var(--hero-glow) 0%, transparent 68%);
 }
 .dsp-hero::after {
   content: ''; position: absolute; left: 50%; bottom: 0;
