@@ -134,7 +134,7 @@
     /* Fonts */
     fontBody:        "'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
     fontDisplay:     "'Bebas Neue', Impact, sans-serif",
-    fontMono:        "'JetBrains Mono', monospace"
+    fontMono:        "'Barlow Semi Condensed', 'Inter', sans-serif"
   };
 
   /* ══════════════════════════════════════════════════════════
@@ -149,7 +149,7 @@
     style.id = "dsp-ui-core-theme";
 
     style.textContent = `
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap');
 
 /* ── CUSTOM PROPERTIES ──────────────────────────────────────────────── */
 :root {
