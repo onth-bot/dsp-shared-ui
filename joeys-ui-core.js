@@ -1,5 +1,5 @@
 /* ============================================================
-   JOEY'S UI CORE  —  v2.0.0
+   JOEY'S UI CORE  —  v2.0.1
    Smoked ruby liquid glass theme
    ============================================================
    USAGE
@@ -110,7 +110,7 @@
 
     /* Borders / Shape */
     border:          "#323235",
-    borderSoft:      "rgba(244,244,245,.16)",
+    borderSoft:      "rgba(244,244,245,.28)",
     rowBorder:       "rgba(244,244,245,.14)",
     rowBorderSoft:   "rgba(244,244,245,.09)",
     radiusSm:        "6px",
@@ -118,9 +118,9 @@
     radiusLg:        "10px",
 
     /* Shadows */
-    shadow:          "0 24px 64px rgba(0,0,0,.44)",
-    shadowCard:      "0 10px 28px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.06)",
-    shadowHover:     "0 18px 42px rgba(0,0,0,.34)",
+    shadow:          "0 34px 90px rgba(0,0,0,.56)",
+    shadowCard:      "0 26px 76px rgba(0,0,0,.52), 0 2px 10px rgba(0,0,0,.34), 0 0 0 1px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.10)",
+    shadowHover:     "0 32px 88px rgba(0,0,0,.60), 0 0 0 1px rgba(var(--accent-rgb),.24)",
 
     /* Status */
     success:         "#22c55e",
@@ -171,11 +171,11 @@
   --surface:             ${t.surface};
   --surface-2:           ${t.surface2};
   --card-surface:        ${t.card};
-  --card-soft:           rgba(20,20,22,.72);
+  --card-soft:           rgba(13,13,15,.92);
   --card-shine-top:      rgba(255,255,255,.18);
   --card-shine-bottom:   rgba(255,255,255,.035);
   --liquid-highlight:    rgba(255,255,255,.18);
-  --liquid-shadow:       rgba(0,0,0,.34);
+  --liquid-shadow:       rgba(0,0,0,.62);
 
   /* Text */
   --text:                ${t.text};
@@ -321,12 +321,13 @@
   position: relative;
   overflow: hidden;
   background:
-    linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.035) 42%, rgba(255,255,255,.07)),
-    linear-gradient(180deg, rgba(22,22,24,.72), rgba(9,9,11,.78));
-  border: 1px solid rgba(255,255,255,.18);
+    linear-gradient(145deg, rgba(255,255,255,.16), rgba(255,255,255,.045) 42%, rgba(255,255,255,.08)),
+    linear-gradient(180deg, rgba(18,18,20,.91), rgba(8,8,10,.95));
+  border: 1px solid rgba(255,255,255,.28);
   box-shadow:
-    0 18px 48px var(--liquid-shadow),
-    inset 0 1px 0 rgba(255,255,255,.22),
+    0 30px 86px var(--liquid-shadow),
+    0 0 0 1px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.24),
     inset 0 -1px 0 rgba(255,255,255,.05);
   backdrop-filter: blur(22px) saturate(1.45);
   -webkit-backdrop-filter: blur(22px) saturate(1.45);
@@ -509,8 +510,8 @@
   position: relative;
   background:
     radial-gradient(circle at 16% 0%, rgba(255,255,255,.14), transparent 32%),
-    linear-gradient(145deg, rgba(255,255,255,.11), rgba(255,255,255,.026) 44%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(22,22,24,.76), rgba(9,9,11,.82));
+    linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.035) 44%, rgba(255,255,255,.065)),
+    linear-gradient(180deg, rgba(18,18,20,.91), rgba(8,8,10,.95));
   color: var(--text);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
@@ -570,8 +571,8 @@
   position: relative;
   background:
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.13), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.025) 42%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(22,22,24,.76), rgba(9,9,11,.82));
+    linear-gradient(145deg, rgba(255,255,255,.115), rgba(255,255,255,.035) 42%, rgba(255,255,255,.065)),
+    linear-gradient(180deg, rgba(18,18,20,.91), rgba(8,8,10,.95));
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
@@ -680,8 +681,8 @@
 .dsp-metric-list {
   background:
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.13), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.025) 42%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(22,22,24,.76), rgba(9,9,11,.82));
+    linear-gradient(145deg, rgba(255,255,255,.115), rgba(255,255,255,.035) 42%, rgba(255,255,255,.065)),
+    linear-gradient(180deg, rgba(18,18,20,.91), rgba(8,8,10,.95));
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
@@ -768,7 +769,7 @@
   scrollbar-width: thin; scrollbar-color: var(--border-main) transparent;
   border: 1px solid var(--border-main);
   border-radius: var(--radius-md);
-  background: rgba(5,6,9,.62);
+  background: rgba(5,5,7,.84);
 }
 .dsp-log::-webkit-scrollbar       { width: 4px; }
 .dsp-log::-webkit-scrollbar-track { background: transparent; }
@@ -826,7 +827,7 @@
 .dsp-select,
 .dsp-textarea {
   width: 100%;
-  background: rgba(5,6,9,.44);
+  background: rgba(5,5,7,.76);
   color: var(--text);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
@@ -858,8 +859,8 @@
   width: 100%; border-collapse: collapse;
   background:
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.13), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.025) 42%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(22,22,24,.76), rgba(9,9,11,.82));
+    linear-gradient(145deg, rgba(255,255,255,.115), rgba(255,255,255,.035) 42%, rgba(255,255,255,.065)),
+    linear-gradient(180deg, rgba(18,18,20,.91), rgba(8,8,10,.95));
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -898,7 +899,7 @@
   background:
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.15), transparent 34%),
     linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.032) 42%, rgba(255,255,255,.06)),
-    linear-gradient(180deg, rgba(22,22,24,.90), rgba(9,9,11,.94));
+    linear-gradient(180deg, rgba(18,18,20,.94), rgba(8,8,10,.97));
   color: var(--text);
   border: 1px solid var(--border-soft);
   border-left: 4px solid var(--accent);
@@ -919,7 +920,7 @@
   border-top: 1px solid var(--border-main);
   padding: 28px 16px; text-align: center;
   color: var(--text-muted); font-size: 12px;
-  background: rgba(5,6,9,.62);
+  background: rgba(5,5,7,.88);
 }
 .dsp-footer-logo {
   font-family: ${t.fontDisplay};
