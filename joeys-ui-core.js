@@ -244,9 +244,9 @@
   /* Page background */
   --page-bg:
     linear-gradient(135deg, rgba(5,5,7,.97), rgba(2,2,4,.99)),
-    radial-gradient(circle at 12% -12%, rgba(var(--accent-rgb),.12), transparent 32rem),
+    radial-gradient(circle at 12% -12%, rgba(var(--accent-rgb),.06), transparent 32rem),
     radial-gradient(circle at 96%  2%, rgba(var(--ink-rgb),.035), transparent 31rem),
-    radial-gradient(circle at 68% 118%, rgba(var(--accent-2-rgb),.10), transparent 34rem),
+    radial-gradient(circle at 68% 118%, rgba(var(--accent-2-rgb),.045), transparent 34rem),
     var(--bg);
 
   /* ── Backward-compatible aliases ──────────────────────── */
