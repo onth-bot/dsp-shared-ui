@@ -96,7 +96,7 @@
     inkRgb:          "244, 244, 245",
 
     /* Page / Surfaces */
-    bg:              "#08090d",
+    bg:              "#030406",
     surface:         "#101318",
     surface2:        "#151a21",
     card:            "#121720",
@@ -223,15 +223,15 @@
   --title-shadow:        0 18px 34px rgba(0,0,0,.42);
 
   /* Derived accent */
-  --accent-bg:           rgba(var(--accent-rgb),.10);
-  --accent-bg-strong:    rgba(var(--accent-rgb),.16);
-  --accent-bg-hover:     rgba(var(--accent-rgb),.075);
-  --accent-bd:           rgba(var(--accent-rgb),.34);
-  --accent-bd-strong:    rgba(var(--accent-rgb),.56);
-  --accent-glow:         rgba(var(--accent-rgb),.22);
-  --accent-glow-soft:    rgba(var(--accent-rgb),.14);
-  --accent-glow-strong:  rgba(var(--accent-rgb),.34);
-  --accent-ring:         rgba(var(--accent-rgb),.035);
+  --accent-bg:           rgba(var(--accent-rgb),.045);
+  --accent-bg-strong:    rgba(var(--accent-rgb),.08);
+  --accent-bg-hover:     rgba(var(--accent-rgb),.035);
+  --accent-bd:           rgba(var(--accent-rgb),.24);
+  --accent-bd-strong:    rgba(var(--accent-rgb),.42);
+  --accent-glow:         rgba(var(--accent-rgb),.14);
+  --accent-glow-soft:    rgba(var(--accent-rgb),.08);
+  --accent-glow-strong:  rgba(var(--accent-rgb),.22);
+  --accent-ring:         rgba(var(--accent-rgb),.018);
 
   /* Derived status */
   --success-bg:          rgba(var(--success-rgb),.10);
@@ -243,10 +243,10 @@
 
   /* Page background */
   --page-bg:
-    linear-gradient(135deg, rgba(13,13,15,.94), rgba(8,8,10,.97)),
-    radial-gradient(circle at 12% -12%, rgba(var(--accent-rgb),.18), transparent 32rem),
-    radial-gradient(circle at 96%  2%, rgba(var(--ink-rgb),.05), transparent 31rem),
-    radial-gradient(circle at 68% 118%, rgba(var(--accent-2-rgb),.16), transparent 34rem),
+    linear-gradient(135deg, rgba(5,5,7,.97), rgba(2,2,4,.99)),
+    radial-gradient(circle at 12% -12%, rgba(var(--accent-rgb),.025), transparent 32rem),
+    radial-gradient(circle at 96%  2%, rgba(var(--ink-rgb),.035), transparent 31rem),
+    radial-gradient(circle at 68% 118%, rgba(var(--accent-2-rgb),.02), transparent 34rem),
     var(--bg);
 
   /* ── Backward-compatible aliases ──────────────────────── */
@@ -321,7 +321,7 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 20% -8%, rgba(var(--accent-rgb),.12), transparent 34%),
+    radial-gradient(circle at 20% -8%, rgba(var(--accent-rgb),.025), transparent 34%),
     linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.036) 42%, rgba(255,255,255,.07)),
     linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
   border: 1px solid rgba(255,255,255,.28);
@@ -364,8 +364,8 @@
   background:
     linear-gradient(rgba(244,244,245,.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(244,244,245,.035) 1px, transparent 1px),
-    radial-gradient(circle at 42% -10%, rgba(var(--accent-rgb),.18), transparent 38rem),
-    radial-gradient(circle at 70% 8%, rgba(var(--accent-2-rgb),.13), transparent 30rem),
+    radial-gradient(circle at 42% -10%, rgba(var(--accent-rgb),.055), transparent 38rem),
+    radial-gradient(circle at 70% 8%, rgba(var(--accent-2-rgb),.035), transparent 30rem),
     linear-gradient(180deg, rgba(16,16,18,.96), rgba(8,8,10,.98));
   background-size: 48px 48px, 48px 48px, auto, auto, auto;
   border-bottom: 1px solid var(--border-soft);
@@ -375,7 +375,7 @@
 .dsp-hero::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(var(--accent-rgb),.08), rgba(var(--accent-2-rgb),.08), rgba(var(--ink-rgb),.09)),
+    linear-gradient(90deg, rgba(var(--accent-rgb),.025), rgba(var(--accent-2-rgb),.025), rgba(var(--ink-rgb),.07)),
     radial-gradient(ellipse 80% 55% at 50% 0%, var(--hero-glow) 0%, transparent 68%);
   opacity: .9;
 }
@@ -397,7 +397,7 @@
   border: 1px solid var(--accent-bd);
   background:
     linear-gradient(145deg, rgba(255,255,255,.15), rgba(255,255,255,.045)),
-    linear-gradient(135deg, rgba(var(--accent-rgb),.13), rgba(var(--accent-2-rgb),.10));
+    linear-gradient(135deg, rgba(var(--accent-rgb),.055), rgba(var(--accent-2-rgb),.035));
   padding: 8px 16px; border-radius: 999px;
   box-shadow: 0 8px 24px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.10);
   margin-bottom: 18px;
@@ -466,7 +466,7 @@
   color: var(--accent);
   background:
     linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.04)),
-    linear-gradient(135deg, rgba(var(--accent-rgb),.12), rgba(var(--accent-2-rgb),.08));
+    linear-gradient(135deg, rgba(var(--accent-rgb),.045), rgba(var(--accent-2-rgb),.025));
   border: 1px solid var(--accent-bd);
   border-radius: var(--radius-md);
   box-shadow: 0 10px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.09);
@@ -510,7 +510,7 @@
 .dsp-card {
   position: relative;
   background:
-    radial-gradient(circle at 16% -6%, rgba(var(--accent-rgb),.10), transparent 36%),
+    radial-gradient(circle at 16% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
     radial-gradient(circle at 16% 0%, rgba(255,255,255,.12), transparent 32%),
     linear-gradient(145deg, rgba(255,255,255,.105), rgba(255,255,255,.030) 44%, rgba(255,255,255,.055)),
     linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
@@ -572,7 +572,7 @@
 .dsp-record-item {
   position: relative;
   background:
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.10), transparent 36%),
+    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.115), transparent 34%),
     linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.030) 42%, rgba(255,255,255,.055)),
     linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
@@ -638,7 +638,7 @@
   transition: background .12s ease, box-shadow .12s ease;
 }
 .dsp-leaderboard tbody tr:last-child { border-bottom: none; }
-.dsp-leaderboard tbody tr:hover { background: rgba(var(--accent-rgb),.065); box-shadow: inset 3px 0 0 var(--accent); }
+.dsp-leaderboard tbody tr:hover { background: rgba(var(--accent-rgb),.035); box-shadow: inset 3px 0 0 var(--accent); }
 .dsp-leaderboard tbody td {
   padding: 10px; font-size: 13px; vertical-align: middle;
 }
@@ -666,7 +666,7 @@
   display: inline-block;
   font-family: ${t.fontMono}; font-size: 10px;
   padding: 3px 8px; border-radius: 999px; letter-spacing: .04em;
-  background: linear-gradient(135deg, var(--accent-bg), rgba(var(--accent-2-rgb),.10));
+  background: linear-gradient(135deg, var(--accent-bg), rgba(var(--accent-2-rgb),.035));
   color: var(--text); border: 1px solid var(--accent-bd);
 }
 
@@ -683,7 +683,7 @@
 /* ── METRIC LIST ────────────────────────────────────────────────────── */
 .dsp-metric-list {
   background:
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.10), transparent 36%),
+    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.115), transparent 34%),
     linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.030) 42%, rgba(255,255,255,.055)),
     linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
@@ -701,7 +701,7 @@
   transition: background .12s ease;
 }
 .dsp-metric-row:last-child { border-bottom: none; }
-.dsp-metric-row:hover { background: rgba(var(--accent-rgb),.065); }
+.dsp-metric-row:hover { background: rgba(var(--accent-rgb),.035); }
 .dsp-metric-name { flex: 1; font-size: 13px; font-weight: 500; color: var(--text); min-width: 0; letter-spacing: .01em; }
 .dsp-metric-name .sub {
   font-family: ${t.fontMono}; font-size: 9px;
@@ -796,7 +796,7 @@
   color: var(--text);
   background:
     linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.04)),
-    linear-gradient(135deg, var(--accent-bg), rgba(var(--accent-2-rgb),.10));
+    linear-gradient(135deg, var(--accent-bg), rgba(var(--accent-2-rgb),.035));
   border: 1px solid var(--accent-bd);
   border-radius: 999px; padding: 5px 10px;
   font-family: ${t.fontMono}; font-size: 10px;
@@ -811,7 +811,7 @@
   border-radius: var(--radius-md);
   background:
     linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.035)),
-    linear-gradient(180deg, rgba(var(--accent-rgb),.12), rgba(var(--accent-rgb),.055));
+    linear-gradient(180deg, rgba(var(--accent-rgb),.055), rgba(var(--accent-rgb),.025));
   color: var(--text);
   font-family: ${t.fontMono}; font-size: 11px; font-weight: 700;
   letter-spacing: .04em; text-transform: uppercase;
@@ -862,7 +862,7 @@
 .dsp-table {
   width: 100%; border-collapse: collapse;
   background:
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.10), transparent 36%),
+    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.115), transparent 34%),
     linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.030) 42%, rgba(255,255,255,.055)),
     linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
@@ -904,7 +904,7 @@
   background:
     radial-gradient(circle at 18% 0%, rgba(255,255,255,.15), transparent 34%),
     linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.032) 42%, rgba(255,255,255,.06)),
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.11), transparent 36%),
+    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
     linear-gradient(180deg, rgba(13,13,15,.97), rgba(5,5,7,.99));
   color: var(--text);
   border: 1px solid var(--border-soft);
