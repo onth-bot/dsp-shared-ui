@@ -96,7 +96,7 @@
     inkRgb:          "244, 244, 245",
 
     /* Page / Surfaces */
-    bg:              "#030406",
+    bg:              "#08090d",
     surface:         "#101318",
     surface2:        "#151a21",
     card:            "#121720",
@@ -243,10 +243,10 @@
 
   /* Page background */
   --page-bg:
-    linear-gradient(135deg, rgba(5,5,7,.97), rgba(2,2,4,.99)),
-    radial-gradient(circle at 12% -12%, rgba(var(--accent-rgb),.06), transparent 32rem),
-    radial-gradient(circle at 96%  2%, rgba(var(--ink-rgb),.035), transparent 31rem),
-    radial-gradient(circle at 68% 118%, rgba(var(--accent-2-rgb),.045), transparent 34rem),
+    linear-gradient(135deg, rgba(13,13,15,.94), rgba(8,8,10,.97)),
+    radial-gradient(circle at 12% -12%, rgba(var(--accent-rgb),.18), transparent 32rem),
+    radial-gradient(circle at 96%  2%, rgba(var(--ink-rgb),.05), transparent 31rem),
+    radial-gradient(circle at 68% 118%, rgba(var(--accent-2-rgb),.16), transparent 34rem),
     var(--bg);
 
   /* ── Backward-compatible aliases ──────────────────────── */
