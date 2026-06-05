@@ -1,6 +1,6 @@
 /* ============================================================
-   JOEY'S UI CORE  —  v2.0.2
-   Smoked ruby liquid glass theme
+   JOEY'S UI CORE  —  v2.2.0
+   Nocturne Bloom liquid glass theme
    ============================================================
    USAGE
    ─────
@@ -87,53 +87,53 @@
 
   DSP_UI.theme = {
     /* Brand / Accent */
-    accent:          "#e11d48",
-    accent2:         "#991b1b",
-    accentDim:       "#7f1d1d",
-    accentRgb:       "225, 29, 72",
-    accent2Rgb:      "153, 27, 27",
-    ink:             "#f4f4f5",
-    inkRgb:          "244, 244, 245",
+    accent:          "#ff8a7a",
+    accent2:         "#b8f2d0",
+    accentDim:       "#b85f57",
+    accentRgb:       "255, 138, 122",
+    accent2Rgb:      "184, 242, 208",
+    ink:             "#fff1ee",
+    inkRgb:          "255, 241, 238",
 
     /* Page / Surfaces */
-    bg:              "#030406",
-    surface:         "#101318",
-    surface2:        "#151a21",
-    card:            "#121720",
+    bg:              "#09070b",
+    surface:         "#141016",
+    surface2:        "#1d171f",
+    card:            "#171219",
 
     /* Text */
     text:            "#f8fafc",
-    textSoft:        "#e2e8f0",
-    textMuted:       "#a1a1aa",
-    textDim:         "#71717a",
-    textSecondary:   "#d4d4d8",
+    textSoft:        "#f7e8e3",
+    textMuted:       "#b9a8ad",
+    textDim:         "#7d6e74",
+    textSecondary:   "#e2d2d4",
 
     /* Borders / Shape */
-    border:          "#323235",
-    borderSoft:      "rgba(244,244,245,.28)",
-    rowBorder:       "rgba(244,244,245,.14)",
-    rowBorderSoft:   "rgba(244,244,245,.09)",
+    border:          "#3b3038",
+    borderSoft:      "rgba(255,241,238,.19)",
+    rowBorder:       "rgba(255,241,238,.12)",
+    rowBorderSoft:   "rgba(255,241,238,.075)",
     radiusSm:        "6px",
     radiusMd:        "8px",
-    radiusLg:        "10px",
+    radiusLg:        "8px",
 
     /* Shadows */
-    shadow:          "0 38px 104px rgba(0,0,0,.64)",
-    shadowCard:      "0 30px 88px rgba(0,0,0,.60), 0 4px 18px rgba(0,0,0,.42), 0 0 0 1px rgba(0,0,0,.46), inset 0 1px 0 rgba(255,255,255,.11)",
-    shadowHover:     "0 36px 96px rgba(0,0,0,.66), 0 0 0 1px rgba(var(--accent-rgb),.28)",
+    shadow:          "0 34px 110px rgba(0,0,0,.62)",
+    shadowCard:      "0 22px 76px rgba(0,0,0,.50), 0 1px 0 rgba(255,255,255,.055), inset 0 1px 0 rgba(255,255,255,.10)",
+    shadowHover:     "0 30px 92px rgba(0,0,0,.60), 0 0 0 1px rgba(var(--accent-rgb),.30)",
 
     /* Status */
-    success:         "#22c55e",
-    successRgb:      "34, 197, 94",
-    warning:         "#f59e0b",
-    warningRgb:      "245, 158, 11",
-    danger:          "#f43f5e",
-    dangerRgb:       "244, 63, 94",
+    success:         "#b8f2d0",
+    successRgb:      "184, 242, 208",
+    warning:         "#ffd166",
+    warningRgb:      "255, 209, 102",
+    danger:          "#ff6b8a",
+    dangerRgb:       "255, 107, 138",
 
     /* Medal */
-    medalGold:       "#f59e0b",
-    medalSilver:     "#e4e4e7",
-    medalBronze:     "#fb923c",
+    medalGold:       "#ffd166",
+    medalSilver:     "#e7dce0",
+    medalBronze:     "#ff9f6e",
 
     /* Fonts */
     fontBody:        "'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
@@ -171,11 +171,11 @@
   --surface:             ${t.surface};
   --surface-2:           ${t.surface2};
   --card-surface:        ${t.card};
-  --card-soft:           rgba(9,9,11,.96);
-  --card-shine-top:      rgba(255,255,255,.18);
-  --card-shine-bottom:   rgba(255,255,255,.035);
-  --liquid-highlight:    rgba(255,255,255,.18);
-  --liquid-shadow:       rgba(0,0,0,.70);
+  --card-soft:           rgba(23,18,25,.82);
+  --card-shine-top:      rgba(255,255,255,.14);
+  --card-shine-bottom:   rgba(255,255,255,.026);
+  --liquid-highlight:    rgba(255,255,255,.13);
+  --liquid-shadow:       rgba(0,0,0,.58);
 
   /* Text */
   --text:                ${t.text};
@@ -217,21 +217,21 @@
   --table-number:        ${t.textMuted};
 
   /* Hero effects */
-  --hero-glow:           rgba(var(--accent-rgb),.16);
+  --hero-glow:           rgba(var(--accent-rgb),.20);
   --hero-glow-soft:      rgba(var(--accent-2-rgb),.12);
-  --grid-line:           rgba(244,244,245,.045);
-  --title-shadow:        0 18px 34px rgba(0,0,0,.42);
+  --grid-line:           transparent;
+  --title-shadow:        0 20px 44px rgba(0,0,0,.48);
 
   /* Derived accent */
-  --accent-bg:           rgba(var(--accent-rgb),.045);
-  --accent-bg-strong:    rgba(var(--accent-rgb),.08);
-  --accent-bg-hover:     rgba(var(--accent-rgb),.035);
-  --accent-bd:           rgba(var(--accent-rgb),.24);
-  --accent-bd-strong:    rgba(var(--accent-rgb),.42);
-  --accent-glow:         rgba(var(--accent-rgb),.14);
-  --accent-glow-soft:    rgba(var(--accent-rgb),.08);
-  --accent-glow-strong:  rgba(var(--accent-rgb),.22);
-  --accent-ring:         rgba(var(--accent-rgb),.018);
+  --accent-bg:           rgba(var(--accent-rgb),.075);
+  --accent-bg-strong:    rgba(var(--accent-rgb),.13);
+  --accent-bg-hover:     rgba(var(--accent-rgb),.06);
+  --accent-bd:           rgba(var(--accent-rgb),.28);
+  --accent-bd-strong:    rgba(var(--accent-rgb),.48);
+  --accent-glow:         rgba(var(--accent-rgb),.18);
+  --accent-glow-soft:    rgba(var(--accent-rgb),.09);
+  --accent-glow-strong:  rgba(var(--accent-rgb),.30);
+  --accent-ring:         rgba(var(--accent-rgb),.032);
 
   /* Derived status */
   --success-bg:          rgba(var(--success-rgb),.10);
@@ -243,10 +243,9 @@
 
   /* Page background */
   --page-bg:
-    linear-gradient(135deg, rgba(5,5,7,.97), rgba(2,2,4,.99)),
-    radial-gradient(circle at 12% -12%, rgba(var(--accent-rgb),.025), transparent 32rem),
-    radial-gradient(circle at 96%  2%, rgba(var(--ink-rgb),.035), transparent 31rem),
-    radial-gradient(circle at 68% 118%, rgba(var(--accent-2-rgb),.02), transparent 34rem),
+    linear-gradient(138deg, rgba(var(--accent-rgb),.13), transparent 34%),
+    linear-gradient(28deg, rgba(var(--accent-2-rgb),.08), transparent 30%),
+    linear-gradient(145deg, rgba(14,9,16,.985), rgba(5,4,7,.995) 58%, rgba(11,8,12,.995)),
     var(--bg);
 
   /* ── Backward-compatible aliases ──────────────────────── */
@@ -321,34 +320,32 @@
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 20% -8%, rgba(var(--accent-rgb),.025), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.036) 42%, rgba(255,255,255,.07)),
-    linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
-  border: 1px solid rgba(255,255,255,.28);
+    linear-gradient(115deg, rgba(255,255,255,.14), rgba(255,255,255,.030) 34%, rgba(var(--accent-rgb),.050) 62%, rgba(255,255,255,.055)),
+    linear-gradient(180deg, rgba(29,23,31,.82), rgba(9,7,11,.96));
+  border: 1px solid rgba(255,241,238,.20);
   box-shadow:
-    0 30px 86px var(--liquid-shadow),
-    0 0 0 1px rgba(0,0,0,.38),
-    inset 0 1px 0 rgba(255,255,255,.24),
+    0 26px 72px var(--liquid-shadow),
+    0 0 0 1px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.14),
     inset 0 -1px 0 rgba(255,255,255,.05);
-  backdrop-filter: blur(22px) saturate(1.45);
-  -webkit-backdrop-filter: blur(22px) saturate(1.45);
+  backdrop-filter: blur(26px) saturate(1.34);
+  -webkit-backdrop-filter: blur(26px) saturate(1.34);
 }
 .dsp-liquid-glass::before,
 .dsp-glass::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background:
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.20), transparent 34%),
-    radial-gradient(circle at 88% 12%, rgba(var(--ink-rgb),.14), transparent 32%),
-    linear-gradient(120deg, transparent 24%, rgba(255,255,255,.12), transparent 44%);
+    linear-gradient(122deg, rgba(255,255,255,.16), transparent 28%, rgba(var(--accent-2-rgb),.055), transparent 58%),
+    linear-gradient(24deg, transparent, rgba(255,255,255,.055), transparent);
   mix-blend-mode: screen;
-  opacity: .72;
+  opacity: .62;
 }
 .dsp-liquid-glass::after,
 .dsp-glass::after {
   content: ''; position: absolute; top: -45%; bottom: -45%; left: -35%;
   width: 34%; pointer-events: none;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
-  opacity: .34;
+  opacity: .18;
 }
 .dsp-liquid-glass:hover::after,
 .dsp-glass:hover::after {
@@ -362,12 +359,11 @@
   align-items: center; justify-content: center;
   text-align: center;
   background:
-    linear-gradient(rgba(244,244,245,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(244,244,245,.035) 1px, transparent 1px),
-    radial-gradient(circle at 42% -10%, rgba(var(--accent-rgb),.055), transparent 38rem),
-    radial-gradient(circle at 70% 8%, rgba(var(--accent-2-rgb),.035), transparent 30rem),
-    linear-gradient(180deg, rgba(16,16,18,.96), rgba(8,8,10,.98));
-  background-size: 48px 48px, 48px 48px, auto, auto, auto;
+    linear-gradient(135deg, rgba(var(--accent-rgb),.16), transparent 36%),
+    linear-gradient(24deg, rgba(var(--accent-2-rgb),.08), transparent 34%),
+    linear-gradient(108deg, transparent 16%, rgba(255,255,255,.04), transparent 46%),
+    linear-gradient(180deg, rgba(21,14,24,.965), rgba(7,5,9,.995));
+  background-size: auto;
   border-bottom: 1px solid var(--border-soft);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
@@ -375,17 +371,17 @@
 .dsp-hero::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(var(--accent-rgb),.025), rgba(var(--accent-2-rgb),.025), rgba(var(--ink-rgb),.07)),
-    radial-gradient(ellipse 80% 55% at 50% 0%, var(--hero-glow) 0%, transparent 68%);
-  opacity: .9;
+    linear-gradient(110deg, transparent 8%, rgba(255,255,255,.08), transparent 31%, rgba(var(--accent-2-rgb),.05), transparent 60%),
+    radial-gradient(ellipse 86% 62% at 50% -4%, var(--hero-glow) 0%, transparent 72%);
+  opacity: .86;
 }
 .dsp-hero::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: 0;
   height: 1px;
   transform: none;
   width: auto;
-  background: linear-gradient(90deg, transparent, var(--accent), #f4f4f5, var(--accent-2), transparent);
-  box-shadow: 0 0 18px var(--accent-glow);
+  background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb),.75), rgba(var(--ink-rgb),.82), rgba(var(--accent-2-rgb),.70), transparent);
+  box-shadow: 0 0 22px rgba(var(--accent-rgb),.18);
 }
 .dsp-hero > * { max-width: min(920px, calc(100vw - 32px)); }
 .dsp-hero-badge {
@@ -396,8 +392,8 @@
   color: var(--text);
   border: 1px solid var(--accent-bd);
   background:
-    linear-gradient(145deg, rgba(255,255,255,.15), rgba(255,255,255,.045)),
-    linear-gradient(135deg, rgba(var(--accent-rgb),.055), rgba(var(--accent-2-rgb),.035));
+    linear-gradient(145deg, rgba(255,255,255,.11), rgba(255,255,255,.035)),
+    linear-gradient(135deg, rgba(var(--accent-rgb),.10), rgba(var(--accent-2-rgb),.045));
   padding: 8px 16px; border-radius: 999px;
   box-shadow: 0 8px 24px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.10);
   margin-bottom: 18px;
@@ -418,7 +414,7 @@
 .dsp-hero-title-accent {
   display: block;
   color: transparent;
-  background: linear-gradient(90deg, #ffffff, var(--accent), #f4f4f5, var(--accent-2));
+  background: linear-gradient(92deg, #ffffff, var(--ink), var(--accent), var(--accent-2));
   -webkit-background-clip: text;
   background-clip: text;
   text-shadow: none;
@@ -465,8 +461,8 @@
   display: flex; align-items: center; justify-content: center;
   color: var(--accent);
   background:
-    linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.04)),
-    linear-gradient(135deg, rgba(var(--accent-rgb),.045), rgba(var(--accent-2-rgb),.025));
+    linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.030)),
+    linear-gradient(135deg, rgba(var(--accent-rgb),.10), rgba(var(--accent-2-rgb),.055));
   border: 1px solid var(--accent-bd);
   border-radius: var(--radius-md);
   box-shadow: 0 10px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.09);
@@ -510,32 +506,27 @@
 .dsp-card {
   position: relative;
   background:
-    radial-gradient(circle at 16% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
-    radial-gradient(circle at 16% 0%, rgba(255,255,255,.12), transparent 32%),
-    linear-gradient(145deg, rgba(255,255,255,.105), rgba(255,255,255,.030) 44%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
+    linear-gradient(125deg, rgba(255,255,255,.115), rgba(255,255,255,.026) 36%, rgba(var(--accent-rgb),.038) 70%, rgba(255,255,255,.052)),
+    linear-gradient(180deg, rgba(29,23,31,.78), rgba(10,8,12,.94));
   color: var(--text);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   font-family: ${t.fontBody};
-  backdrop-filter: blur(22px) saturate(1.42);
-  -webkit-backdrop-filter: blur(22px) saturate(1.42);
+  backdrop-filter: blur(24px) saturate(1.32);
+  -webkit-backdrop-filter: blur(24px) saturate(1.32);
 }
 .dsp-panel::before,
 .dsp-card::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   border-radius: inherit;
   background:
-    linear-gradient(120deg, rgba(255,255,255,.16), transparent 28%),
-    radial-gradient(circle at 90% 10%, rgba(var(--ink-rgb),.10), transparent 30%);
-  opacity: .55;
+    linear-gradient(118deg, rgba(255,255,255,.16), transparent 28%, rgba(var(--accent-2-rgb),.045), transparent 62%);
+  opacity: .52;
 }
 .dsp-panel > *,
 .dsp-card > * { position: relative; z-index: 1; }
-.dsp-card {
-  border-top-color: rgba(255,255,255,.26);
-}
+.dsp-card { border-top-color: rgba(255,241,238,.25); }
 .dsp-panel { padding: 14px; }
 .dsp-card  { padding: 18px 16px; overflow: hidden; }
 
@@ -549,7 +540,7 @@
 .dsp-card-icon {
   width: 24px; height: 24px; flex-shrink: 0;
   background:
-    linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.035)),
+    linear-gradient(145deg, rgba(255,255,255,.14), rgba(255,255,255,.030)),
     linear-gradient(135deg, var(--accent-bg), rgba(var(--accent-2-rgb),.10));
   border: 1px solid var(--accent-bd);
   border-radius: var(--radius-md);
@@ -572,23 +563,21 @@
 .dsp-record-item {
   position: relative;
   background:
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.115), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.030) 42%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
+    linear-gradient(125deg, rgba(255,255,255,.11), rgba(255,255,255,.025) 36%, rgba(var(--accent-rgb),.04) 70%, rgba(255,255,255,.05)),
+    linear-gradient(180deg, rgba(29,23,31,.78), rgba(10,8,12,.94));
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   padding: 18px 16px; min-width: 0;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-  backdrop-filter: blur(22px) saturate(1.42);
-  -webkit-backdrop-filter: blur(22px) saturate(1.42);
+  backdrop-filter: blur(24px) saturate(1.32);
+  -webkit-backdrop-filter: blur(24px) saturate(1.32);
 }
 .dsp-record-item::before {
   content: ''; position: absolute; inset: 0 0 auto;
   height: 2px;
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  background: linear-gradient(90deg, var(--accent), #f4f4f5, var(--accent-2), transparent);
+  background: linear-gradient(90deg, var(--accent), var(--ink), var(--accent-2), transparent);
   opacity: .72;
 }
 .dsp-record-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); border-color: var(--accent-bd); }
@@ -673,8 +662,8 @@
 /* ── SCORE RING ─────────────────────────────────────────────────────── */
 /* Wrap an SVG + center label. Usage: see DSP_UI.ring() helper below */
 .dsp-ring-wrap   { position: relative; flex-shrink: 0; }
-.dsp-ring-wrap svg { transform: rotate(-90deg); filter: drop-shadow(0 0 10px rgba(var(--accent-rgb),.22)); }
-.dsp-ring-track  { fill: none; stroke: rgba(244,244,245,.18); }
+.dsp-ring-wrap svg { transform: rotate(-90deg); filter: drop-shadow(0 0 10px rgba(var(--accent-rgb),.20)); }
+.dsp-ring-track  { fill: none; stroke: rgba(255,241,238,.16); }
 .dsp-ring-fill   { fill: none; stroke: var(--accent); stroke-linecap: round; transition: stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1); }
 .dsp-ring-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .dsp-ring-score  { font-family: ${t.fontDisplay}; font-weight: 800; line-height: 1; color: var(--accent); letter-spacing: 0; }
@@ -683,16 +672,14 @@
 /* ── METRIC LIST ────────────────────────────────────────────────────── */
 .dsp-metric-list {
   background:
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.115), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.030) 42%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
+    linear-gradient(125deg, rgba(255,255,255,.10), rgba(255,255,255,.024) 38%, rgba(var(--accent-2-rgb),.035) 72%, rgba(255,255,255,.044)),
+    linear-gradient(180deg, rgba(29,23,31,.78), rgba(10,8,12,.94));
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   overflow: hidden;
-  backdrop-filter: blur(22px) saturate(1.42);
-  -webkit-backdrop-filter: blur(22px) saturate(1.42);
+  backdrop-filter: blur(24px) saturate(1.32);
+  -webkit-backdrop-filter: blur(24px) saturate(1.32);
 }
 .dsp-metric-row {
   display: flex; align-items: center; gap: 12px;
@@ -747,13 +734,13 @@
 
 /* ── PROGRESS BAR ───────────────────────────────────────────────────── */
 .dsp-progress-track {
-  height: 6px; background: rgba(5,5,7,.62);
+  height: 6px; background: rgba(7,5,9,.72);
   border: 1px solid var(--border-main);
   border-radius: 999px; overflow: hidden;
 }
 .dsp-progress-fill {
   height: 100%; width: 0%;
-  background: linear-gradient(90deg, var(--accent), #f4f4f5, var(--accent-2));
+  background: linear-gradient(90deg, var(--accent), var(--ink), var(--accent-2));
   border-radius: 999px;
   box-shadow: 0 0 10px rgba(var(--accent-rgb),.24);
   transition: width .3s ease;
@@ -773,7 +760,7 @@
   scrollbar-width: thin; scrollbar-color: var(--border-main) transparent;
   border: 1px solid var(--border-main);
   border-radius: var(--radius-md);
-  background: rgba(2,2,4,.92);
+  background: rgba(7,5,9,.88);
 }
 .dsp-log::-webkit-scrollbar       { width: 4px; }
 .dsp-log::-webkit-scrollbar-track { background: transparent; }
@@ -795,8 +782,8 @@
   display: inline-flex; align-items: center; gap: 6px;
   color: var(--text);
   background:
-    linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.04)),
-    linear-gradient(135deg, var(--accent-bg), rgba(var(--accent-2-rgb),.035));
+    linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.030)),
+    linear-gradient(135deg, var(--accent-bg), rgba(var(--accent-2-rgb),.045));
   border: 1px solid var(--accent-bd);
   border-radius: 999px; padding: 5px 10px;
   font-family: ${t.fontMono}; font-size: 10px;
@@ -810,8 +797,8 @@
   border: 1px solid var(--accent-bd);
   border-radius: var(--radius-md);
   background:
-    linear-gradient(145deg, rgba(255,255,255,.13), rgba(255,255,255,.035)),
-    linear-gradient(180deg, rgba(var(--accent-rgb),.055), rgba(var(--accent-rgb),.025));
+    linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.032)),
+    linear-gradient(180deg, rgba(var(--accent-rgb),.060), rgba(var(--accent-2-rgb),.025));
   color: var(--text);
   font-family: ${t.fontMono}; font-size: 11px; font-weight: 700;
   letter-spacing: .04em; text-transform: uppercase;
@@ -822,7 +809,7 @@
 .dsp-btn:hover:not(:disabled)   { transform: translateY(-1px); filter: brightness(1.08); border-color: var(--accent-bd-strong); box-shadow: 0 10px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.10); }
 .dsp-btn:active:not(:disabled)  { transform: translateY(0); }
 .dsp-btn:disabled               { opacity: .35; cursor: not-allowed; }
-.dsp-btn.primary { background: linear-gradient(135deg, var(--accent), #be123c, var(--accent-2)); color: #ffffff; border-color: rgba(255,255,255,.24); }
+.dsp-btn.primary { background: linear-gradient(135deg, #fff6f3, var(--accent), #f2a2bd 56%, var(--accent-2)); color: #1c1015; border-color: rgba(255,255,255,.28); box-shadow: 0 12px 34px rgba(var(--accent-rgb),.22), inset 0 1px 0 rgba(255,255,255,.28); }
 .dsp-btn.danger  { background: var(--danger-bg); color: var(--danger); border-color: var(--danger-bd); }
 .dsp-btn.success { background: var(--success-bg); color: var(--success); border-color: var(--success-bd); }
 
@@ -831,7 +818,7 @@
 .dsp-select,
 .dsp-textarea {
   width: 100%;
-  background: rgba(2,2,4,.86);
+  background: rgba(10,8,12,.84);
   color: var(--text);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
@@ -862,10 +849,8 @@
 .dsp-table {
   width: 100%; border-collapse: collapse;
   background:
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.115), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.030) 42%, rgba(255,255,255,.055)),
-    linear-gradient(180deg, rgba(13,13,15,.965), rgba(5,5,7,.985));
+    linear-gradient(125deg, rgba(255,255,255,.09), rgba(255,255,255,.022) 38%, rgba(var(--accent-2-rgb),.030) 72%, rgba(255,255,255,.040)),
+    linear-gradient(180deg, rgba(29,23,31,.78), rgba(10,8,12,.94));
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -902,10 +887,8 @@
   position: fixed; right: 16px; bottom: 16px;
   z-index: 999999; max-width: 360px;
   background:
-    radial-gradient(circle at 18% 0%, rgba(255,255,255,.15), transparent 34%),
-    linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.032) 42%, rgba(255,255,255,.06)),
-    radial-gradient(circle at 18% -6%, rgba(var(--accent-rgb),.025), transparent 36%),
-    linear-gradient(180deg, rgba(13,13,15,.97), rgba(5,5,7,.99));
+    linear-gradient(125deg, rgba(255,255,255,.12), rgba(255,255,255,.026) 38%, rgba(var(--accent-rgb),.038) 72%, rgba(255,255,255,.050)),
+    linear-gradient(180deg, rgba(29,23,31,.88), rgba(10,8,12,.97));
   color: var(--text);
   border: 1px solid var(--border-soft);
   border-left: 4px solid var(--accent);
@@ -914,8 +897,8 @@
   padding: 12px 14px;
   font-family: ${t.fontBody}; font-size: 13px;
   animation: dsp-fadeUp .25s ease both;
-  backdrop-filter: blur(22px) saturate(1.42);
-  -webkit-backdrop-filter: blur(22px) saturate(1.42);
+  backdrop-filter: blur(24px) saturate(1.32);
+  -webkit-backdrop-filter: blur(24px) saturate(1.32);
 }
 .dsp-toast.success { border-left-color: var(--success); }
 .dsp-toast.warning { border-left-color: var(--warning); }
@@ -926,7 +909,7 @@
   border-top: 1px solid var(--border-main);
   padding: 28px 16px; text-align: center;
   color: var(--text-muted); font-size: 12px;
-  background: rgba(5,5,7,.88);
+  background: rgba(7,5,9,.88);
 }
 .dsp-footer-logo {
   font-family: ${t.fontDisplay};
