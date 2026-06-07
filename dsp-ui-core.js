@@ -1,10 +1,10 @@
 /* ============================================================
-   ONTH / DSP SHARED UI CORE  —  v2.0.1
+   ONTH / DSP SHARED UI CORE  —  v2.0.2
    ============================================================
    USAGE
    ─────
    HTML page:
-     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
      <script src="https://cdn.jsdelivr.net/gh/onth-bot/dsp-shared-ui@main/dsp-ui-core.js"></script>
 
    Tampermonkey:
@@ -165,10 +165,10 @@
   --surface-2:           ${t.surface2};
   --card-surface:        ${t.card};
   --card-soft:           rgba(10,15,24,.94);
-  --card-shine-top:      rgba(255,255,255,.14);
-  --card-shine-bottom:   rgba(255,255,255,.03);
-  --liquid-highlight:    rgba(255,255,255,.16);
-  --liquid-shadow:       rgba(0,0,0,.58);
+  --card-shine-top:      rgba(255,255,255,.10);
+  --card-shine-bottom:   rgba(255,255,255,.025);
+  --liquid-highlight:    rgba(255,255,255,.11);
+  --liquid-shadow:       rgba(0,0,0,.42);
 
   /* Text */
   --text:                ${t.text};
@@ -210,8 +210,8 @@
   --table-number:        ${t.textMuted};
 
   /* Hero effects */
-  --hero-glow:           rgba(0,212,255,.17);
-  --hero-glow-soft:      rgba(0,212,255,.08);
+  --hero-glow:           rgba(0,212,255,.12);
+  --hero-glow-soft:      rgba(0,212,255,.055);
   --grid-line:           rgba(0,212,255,.026);
   --title-shadow:        0 16px 40px rgba(0,0,0,.35);
 
@@ -221,9 +221,9 @@
   --accent-bg-hover:     rgba(var(--accent-rgb),.045);
   --accent-bd:           rgba(var(--accent-rgb),.20);
   --accent-bd-strong:    rgba(var(--accent-rgb),.36);
-  --accent-glow:         rgba(var(--accent-rgb),.30);
-  --accent-glow-soft:    rgba(var(--accent-rgb),.22);
-  --accent-glow-strong:  rgba(var(--accent-rgb),.50);
+  --accent-glow:         rgba(var(--accent-rgb),.22);
+  --accent-glow-soft:    rgba(var(--accent-rgb),.16);
+  --accent-glow-strong:  rgba(var(--accent-rgb),.36);
   --accent-ring:         rgba(var(--accent-rgb),.025);
 
   /* Derived status */
@@ -315,30 +315,30 @@
     radial-gradient(circle at 84% 0%, rgba(255,255,255,.10), transparent 30%),
     linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.034) 42%, rgba(255,255,255,.060)),
     linear-gradient(180deg, rgba(12,18,28,.94), rgba(6,10,17,.98));
-  border: 1px solid rgba(200,220,245,.24);
+  border: 1px solid rgba(200,220,245,.18);
   box-shadow:
-    0 28px 82px var(--liquid-shadow),
-    0 4px 18px rgba(0,0,0,.36),
+    0 18px 48px var(--liquid-shadow),
+    0 3px 12px rgba(0,0,0,.28),
     0 0 0 1px rgba(0,0,0,.36),
     inset 0 1px 0 rgba(255,255,255,.18);
-  backdrop-filter: blur(22px) saturate(1.42);
-  -webkit-backdrop-filter: blur(22px) saturate(1.42);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
 }
 .dsp-liquid-glass::before,
 .dsp-glass::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   border-radius: inherit;
   background:
-    linear-gradient(120deg, rgba(255,255,255,.18), transparent 30%),
+    linear-gradient(120deg, rgba(255,255,255,.11), transparent 30%),
     radial-gradient(circle at 92% 10%, rgba(var(--accent-rgb),.12), transparent 30%);
-  opacity: .62;
+  opacity: .48;
 }
 .dsp-liquid-glass::after,
 .dsp-glass::after {
   content: ''; position: absolute; top: -45%; bottom: -45%; left: -35%;
   width: 34%; pointer-events: none;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
-  opacity: .32;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.10), transparent);
+  opacity: .22;
 }
 .dsp-liquid-glass:hover::after,
 .dsp-glass:hover::after {
@@ -371,7 +371,7 @@
   width: min(620px, 88vw); height: 2px;
   transform: translateX(-50%);
   background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
-  box-shadow: 0 0 24px var(--accent-glow);
+  box-shadow: 0 0 16px var(--accent-glow);
 }
 .dsp-hero-badge {
   position: relative; z-index: 1;
@@ -397,7 +397,7 @@
 .dsp-hero-title-accent {
   display: block;
   color: var(--accent);
-  text-shadow: 0 0 32px var(--accent-glow-soft);
+  text-shadow: 0 0 22px var(--accent-glow-soft);
 }
 .dsp-hero-name {
   position: relative; z-index: 1;
@@ -483,22 +483,22 @@
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow:
-    0 24px 74px rgba(0,0,0,.46),
-    0 2px 12px rgba(0,0,0,.30),
+    0 14px 38px rgba(0,0,0,.32),
+    0 2px 8px rgba(0,0,0,.22),
     0 0 0 1px rgba(0,0,0,.30),
-    inset 0 1px 0 rgba(255,255,255,.12);
+    inset 0 1px 0 rgba(255,255,255,.09);
   font-family: ${t.fontBody};
-  backdrop-filter: blur(20px) saturate(1.36);
-  -webkit-backdrop-filter: blur(20px) saturate(1.36);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
 }
 .dsp-panel::before,
 .dsp-card::before {
   content: ''; position: absolute; inset: 0; pointer-events: none;
   border-radius: inherit;
   background:
-    linear-gradient(120deg, rgba(255,255,255,.14), transparent 30%),
+    linear-gradient(120deg, rgba(255,255,255,.09), transparent 30%),
     radial-gradient(circle at 92% 10%, rgba(var(--accent-rgb),.10), transparent 30%);
-  opacity: .58;
+  opacity: .44;
 }
 .dsp-panel > *,
 .dsp-card > * { position: relative; z-index: 1; }
@@ -542,14 +542,14 @@
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow:
-    0 24px 74px rgba(0,0,0,.46),
-    0 2px 12px rgba(0,0,0,.30),
+    0 14px 38px rgba(0,0,0,.32),
+    0 2px 8px rgba(0,0,0,.22),
     0 0 0 1px rgba(0,0,0,.30),
-    inset 0 1px 0 rgba(255,255,255,.12);
+    inset 0 1px 0 rgba(255,255,255,.09);
   padding: 16px 14px; min-width: 0;
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-  backdrop-filter: blur(20px) saturate(1.36);
-  -webkit-backdrop-filter: blur(20px) saturate(1.36);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
 }
 .dsp-record-item::before {
   content: ''; position: absolute; inset: 0 0 auto;
@@ -560,7 +560,7 @@
 }
 .dsp-record-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 30px 84px rgba(0,0,0,.52), 0 0 0 1px var(--accent-bd);
+  box-shadow: 0 18px 46px rgba(0,0,0,.36), 0 0 0 1px var(--accent-bd);
   border-color: var(--accent-bd-strong);
 }
 .dsp-record-label {
@@ -572,7 +572,7 @@
   font-family: ${t.fontDisplay};
   font-size: clamp(30px, 8vw, 44px);
   color: var(--accent); line-height: 1; margin-bottom: 4px;
-  text-shadow: 0 0 24px var(--accent-glow-soft);
+  text-shadow: 0 0 16px var(--accent-glow-soft);
 }
 .dsp-record-name {
   font-size: 13px; font-weight: 700; color: var(--text);
@@ -642,7 +642,7 @@
 /* ── SCORE RING ─────────────────────────────────────────────────────── */
 /* Wrap an SVG + center label. Usage: see DSP_UI.ring() helper below */
 .dsp-ring-wrap   { position: relative; flex-shrink: 0; }
-.dsp-ring-wrap svg { transform: rotate(-90deg); filter: drop-shadow(0 0 12px rgba(var(--accent-rgb),.30)); }
+.dsp-ring-wrap svg { transform: rotate(-90deg); filter: drop-shadow(0 0 8px rgba(var(--accent-rgb),.22)); }
 .dsp-ring-track  { fill: none; stroke: var(--border-main); }
 .dsp-ring-fill   { fill: none; stroke: var(--accent); stroke-linecap: round; transition: stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1); }
 .dsp-ring-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -659,13 +659,13 @@
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow:
-    0 24px 74px rgba(0,0,0,.46),
-    0 2px 12px rgba(0,0,0,.30),
+    0 14px 38px rgba(0,0,0,.32),
+    0 2px 8px rgba(0,0,0,.22),
     0 0 0 1px rgba(0,0,0,.30),
-    inset 0 1px 0 rgba(255,255,255,.12);
+    inset 0 1px 0 rgba(255,255,255,.09);
   overflow: hidden;
-  backdrop-filter: blur(20px) saturate(1.36);
-  -webkit-backdrop-filter: blur(20px) saturate(1.36);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
 }
 .dsp-metric-row {
   display: flex; align-items: center; gap: 12px;
@@ -727,7 +727,7 @@
   height: 100%; width: 0%;
   background: var(--accent);
   border-radius: 4px;
-  box-shadow: 0 0 8px rgba(var(--accent-rgb),.25);
+  box-shadow: 0 0 6px rgba(var(--accent-rgb),.18);
   transition: width .3s ease;
   position: relative; overflow: hidden;
 }
@@ -782,8 +782,8 @@
   border: 1px solid var(--accent-bd);
   border-radius: var(--radius-md);
   background:
-    linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.032)),
-    linear-gradient(180deg, rgba(var(--accent-rgb),.18), rgba(var(--accent-rgb),.08));
+    linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.024)),
+    linear-gradient(180deg, rgba(var(--accent-rgb),.105), rgba(var(--accent-rgb),.045));
   color: var(--accent);
   font-family: ${t.fontMono}; font-size: 11px; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase;
@@ -834,8 +834,6 @@
 .dsp-table {
   width: 100%; border-collapse: collapse;
   background:
-    radial-gradient(circle at 18% -8%, rgba(var(--accent-rgb),.11), transparent 35%),
-    linear-gradient(145deg, rgba(255,255,255,.095), rgba(255,255,255,.026) 42%, rgba(255,255,255,.050)),
     linear-gradient(180deg, rgba(12,18,28,.94), rgba(6,10,17,.98));
   border: 1px solid var(--border-soft);
   border-radius: var(--radius-md);
@@ -884,8 +882,8 @@
   padding: 12px 14px;
   font-family: ${t.fontBody}; font-size: 13px;
   animation: dsp-fadeUp .25s ease both;
-  backdrop-filter: blur(20px) saturate(1.36);
-  -webkit-backdrop-filter: blur(20px) saturate(1.36);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
 }
 .dsp-toast.success { border-left-color: var(--success); }
 .dsp-toast.warning { border-left-color: var(--warning); }
