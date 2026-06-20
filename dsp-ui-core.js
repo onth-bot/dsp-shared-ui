@@ -81,6 +81,25 @@
   window.DSP_UI = window.DSP_UI || {};
 
   /* ══════════════════════════════════════════════════════════
+     DSP PROFILE
+     Keep all DSP-specific names, links, and data endpoints here.
+     Universal pages can read this through DSP_UI.dsp.
+     ══════════════════════════════════════════════════════════ */
+
+  DSP_UI.dsp = Object.assign({
+    shortCode:       "DSJ5",
+    name:            "On The Level Logistics",
+    brandHtml:       "On The <span>Level</span>",
+    footerBrandHtml: "On The <span>Level</span> Logistics",
+    location:        "825 N Clovis Ave",
+    city:            "Fresno, CA",
+    apiUrl:          "https://script.google.com/macros/s/AKfycbxb9ZQAxdZ9JeDi60V4Qwkhdn4gj3DTKzbabDfSH-0wUUcEKSIR3m_liDjErk4qf-X59Q/exec",
+    dashboardUrl:    "https://onth-bot.github.io/onth-dashboard/",
+    gamePlanUrl:     "https://onth-bot.github.io/gameplan/",
+    internalLabel:   "ONTH INTERNAL USE ONLY"
+  }, DSP_UI.dsp || {});
+
+  /* ══════════════════════════════════════════════════════════
      THEME TOKENS
      ══════════════════════════════════════════════════════════ */
 
