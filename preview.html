@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSP Shared UI Preview</title>
+    <script src="./dsp-ui-core.js"></script>
+    <style>
+      body { margin: 0; }
+      .preview-shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; padding: 40px 0 72px; }
+      .preview-hero { min-height: 330px; padding: 48px 24px; }
+      .preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+      .preview-wide { grid-column: span 2; }
+      .preview-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .preview-form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      .preview-form .dsp-textarea { grid-column: 1 / -1; min-height: 88px; resize: vertical; }
+      @media (max-width: 760px) {
+        .preview-grid { grid-template-columns: 1fr; }
+        .preview-wide { grid-column: auto; }
+        .preview-form { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body class="dsp-page-bg dsp-font dsp-reset">
+    <header class="dsp-hero preview-hero">
+      <span class="dsp-hero-badge">ONTH · Shared interface</span>
+      <h1 class="dsp-hero-title">DSP PERFORMANCE <span class="dsp-hero-title-accent">HUB</span></h1>
+      <p class="dsp-hero-sub">One visual system for the website, internal tools, and Tampermonkey workflows.</p>
+      <p class="dsp-hero-meta">Component preview · v2.1.0</p>
+    </header>
+
+    <main class="preview-shell">
+      <div class="dsp-section-header">
+        <span class="dsp-section-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 19V9m8 10V5m8 14v-7"/></svg>
+        </span>
+        <div class="dsp-section-title-wrap">
+          <div class="dsp-section-eyebrow">Performance</div>
+          <h2 class="dsp-section-title">Weekly overview</h2>
+        </div>
+        <span class="dsp-section-line"></span>
+      </div>
+
+      <section class="preview-grid">
+        <article class="dsp-record-item">
+          <div class="dsp-record-label">Team overall</div>
+          <div class="dsp-record-val">96.8</div>
+          <div class="dsp-record-name">Brianna Marie Witrado</div>
+          <div class="dsp-record-date">Week of Aug 2, 2026</div>
+        </article>
+        <article class="dsp-record-item">
+          <div class="dsp-record-label">Coaching complete</div>
+          <div class="dsp-record-val">14</div>
+          <div class="dsp-record-name">4 remaining</div>
+          <div class="dsp-record-date">Updated just now</div>
+        </article>
+        <article class="dsp-card">
+          <div class="dsp-card-title">Current status</div>
+          <div class="dsp-stack">
+            <span class="dsp-chip good">Ready</span>
+            <span class="dsp-chip warn">Needs review</span>
+            <span class="dsp-chip bad">Action required</span>
+          </div>
+        </article>
+
+        <article class="dsp-card preview-wide">
+          <div class="dsp-card-title">Driver metrics</div>
+          <div class="dsp-metric-list">
+            <div class="dsp-metric-row"><span class="dsp-metric-name">Overall<span class="sub">Scorecard</span></span><strong class="dsp-metric-chip green">99.2</strong></div>
+            <div class="dsp-metric-row"><span class="dsp-metric-name">Photo on Delivery<span class="sub">POD</span></span><strong class="dsp-metric-chip amber">99.4%</strong></div>
+            <div class="dsp-metric-row"><span class="dsp-metric-name">Customer Delivery Feedback<span class="sub">CDF</span></span><strong class="dsp-metric-chip red">2</strong></div>
+          </div>
+        </article>
+
+        <article class="dsp-panel">
+          <h2 class="dsp-title">Controls</h2>
+          <p class="dsp-muted">Keyboard and hover states</p>
+          <div class="preview-actions">
+            <button class="dsp-btn primary" type="button">Refresh now</button>
+            <button class="dsp-btn" type="button">View team</button>
+          </div>
+        </article>
+
+        <article class="dsp-panel preview-wide">
+          <div class="dsp-card-title">Coaching notes</div>
+          <div class="preview-form">
+            <input class="dsp-input" placeholder="Driver name" aria-label="Driver name">
+            <select class="dsp-select" aria-label="Status"><option>Not started</option><option>In progress</option><option>Complete</option></select>
+            <textarea class="dsp-textarea" placeholder="Add coaching notes" aria-label="Coaching notes"></textarea>
+          </div>
+        </article>
+
+        <article class="dsp-card">
+          <div class="dsp-card-title">System messages</div>
+          <div class="dsp-alert good">Authenticated sheet connected.</div>
+          <div class="dsp-alert warning">Two assignments need review.</div>
+          <div class="dsp-alert">A required source is unavailable.</div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="dsp-footer">
+      <div class="dsp-footer-logo">ON THE <span>LEVEL</span> LOGISTICS</div>
+      <div class="dsp-footer-internal">ONTH INTERNAL USE ONLY</div>
+    </footer>
+
+    <script>
+      DSP_UI.injectTheme();
+    </script>
+  </body>
+</html>
